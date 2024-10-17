@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="MAIN" Id="{65b05204-014c-4b23-b655-8f29fd371ac4}">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	// Controller inputs (system states)
+	x  AT%I*  : LREAL := 0.0;	// State 1, Cylinder position	[m]
+	dx AT%I*  : LREAL := 0.0;	// State 2, Cylinder velocity	[m s^-1]
+	p  AT%I*  : LREAL := 0.0;	// State 3, Cylinder pressure	[Pa]
+
+	// Controller outputs
+	q  AT%Q*  : LREAL := 0.0;	// Input air flow				[m^3 s^-1]
+
+
+	// Reference input
+	w  : LREAL := 0.0;			// Cylinder position			[m]
+
+
+	// Control canonical system states
+	z1 : LREAL := 0.0;
+	z2 : LREAL := 0.0;
+	z3 : LREAL := 0.0;
+
+	// Virtual controller output
+	v  : LREAL := 0.0;
+
+
+	// Piston parameter
+	A  : LREAL := 5.0e-3;		// Piston area					[m^2]
+	c  : LREAL := 2.0e3;		// Spring stiffness				[N m^-1]
+	m  : LREAL := 1.0;			// Piston mass					[kg]
+
+	// Controller design parameter
+	L  : LREAL := -10.0;		// Desired closed loop eigenvalues
+	r1 : LREAL := -L*L*L;		// Controller feedback gain 1
+	r2 : LREAL := 3*L*L;		// Controller feedback gain 2
+	r3 : LREAL := -3*L;			// Controller feedback gain 3
+	f  : LREAL := -L*L*L;		// Controller input gain
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Control canonical system states
+z1 := x;
+z2 := dx;
+z3 := -(c/m) * x + (A/m) * p;
+
+// Virtual controller output
+v := -r1 * z1 - r2 * z2 - r3 * z3 + f * w;
+
+// Controller output
+q := m * (x/p) * ((c/m)*dx + (A/m)*(dx*p/x) + v);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
