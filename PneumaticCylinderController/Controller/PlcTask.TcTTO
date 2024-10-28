@@ -1,17 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
-  <Task Name="PlcTask" Id="{63dee356-76e4-4b74-bda4-4ed7353f208e}">
+  <Task Name="PlcTask" Id="{6e5a392d-ab79-4080-8e7b-7dc93b0c9797}">
     <!--CycleTime in micro seconds.-->
-    <CycleTime>10000</CycleTime>
+    <CycleTime>1000</CycleTime>
     <Priority>20</Priority>
     <PouCall>
       <Name>MAIN</Name>
     </PouCall>
-    <TaskFBGuid>{22f9a593-fc38-41fa-95aa-7caceffcd8cc}</TaskFBGuid>
-    <Fb_init>{c0eadcc0-46ec-4468-b0a5-0b47249d0c2d}</Fb_init>
-    <Fb_exit>{91d5e8af-61d7-43ed-b8fc-a29e956125a4}</Fb_exit>
-    <CycleUpdate>{8473b2a0-fb19-4792-9193-dfd7a88097ac}</CycleUpdate>
-    <PostCycleUpdate>{19c438f6-dafa-49cd-b78b-a5213cf79d46}</PostCycleUpdate>
-    <ObjectProperties />
+    <TaskFBGuid>{7d01c013-fc90-4a54-a069-cd857f643730}</TaskFBGuid>
+    <Fb_init>{ee4ba7d3-e6c3-4319-8881-559659f001ce}</Fb_init>
+    <Fb_exit>{fcd50abd-b2fc-480f-9707-f2bcf2ce7ee6}</Fb_exit>
+    <CycleUpdate>{d471f1e0-8232-46e2-9eb4-d0e7951c803c}</CycleUpdate>
+    <PostCycleUpdate>{0da2a0f7-a4d4-4891-851e-f799677e263b}</PostCycleUpdate>
   </Task>
 </TcPlcObject>
