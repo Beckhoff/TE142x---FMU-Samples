@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.10">
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.12">
 	<DataTypes>
 		<DataType>
 			<Name GUID="{6D4FD3BA-AB2F-4710-8EA7-4053669988E2}">ITcSimIoCfgProvider</Name>
@@ -63,7 +63,7 @@
 	<ImageDatas>
 		<ImageData Id="1000">424d360300000000000036000000280000001000000010000000010018000000000000000000c40e0000c40e00000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000ff00ff000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000000000000000000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000000000ff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0000000ff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0c0c0c0000000ff00ffff00ffff00ff000000ff00ffff00ffff00ff030003c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0c0c0c0000000ff00ffff00ffff00ff000000ff00ffff00ffff00ff000000000000000000000000000000000000c0c0c0c0c0c0000000ff00ffff00ffff00ff000000ff00ffff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0000000ff00ffff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000000000ff00ffff00ff000000000000000000ff00ffff00ffff00ffff00ffff00ff000000000000000000000000000000000000ff00ffff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff</ImageData>
 	</ImageDatas>
-	<Project ProjectGUID="{895BCAB6-4277-48CE-A294-A3B8A50E7DF6}" Target64Bit="true" ShowHideConfigurations="#x6">
+	<Project ProjectGUID="{E5C591D8-68EA-4EFE-B46D-C1307ED5610C}" TargetNetId="34.198.20.30.1.1" Target64Bit="true" ShowHideConfigurations="#x6">
 		<System>
 			<Tasks>
 				<Task Id="2" Priority="1" CycleTime="10000" AmsPort="350" AdtTasks="true">
@@ -441,8 +441,8 @@
 			</Modules>
 		</System>
 		<Plc>
-			<Project GUID="{DFE5D6A4-D04B-49DB-A3A6-A71D4F10F519}" Name="Controller" PrjFilePath="Controller\Controller.plcproj" TmcFilePath="Controller\Controller.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{B7F518FF-62C3-5EA2-82FE-F5C2B1A2FD8F}">
+			<Project GUID="{4BACF94D-C151-4A8E-8063-65CAA54B2319}" Name="Controller" PrjFilePath="Controller\Controller.plcproj" TmcFilePath="Controller\Controller.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{A0B4106E-04D1-F239-173B-2C2E7AE1B48D}" TmcPath="Controller\Controller.tmc">
 					<Name>Controller Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="2" AreaNo="1">
@@ -479,7 +479,7 @@
 								<OTCID>#x02010040</OTCID>
 							</ManualConfig>
 							<Priority>20</Priority>
-							<CycleTime>10000000</CycleTime>
+							<CycleTime>1000000</CycleTime>
 						</Context>
 					</Contexts>
 					<TaskPouOids>
@@ -488,8 +488,10 @@
 				</Instance>
 			</Project>
 		</Plc>
+		<Io/>
 	</Project>
 	<Mappings>
+		<MappingInfo Identifier="{00000000-2001-0850-0020-500820000101}" Id="#x02030010"/>
 		<OwnerA Name="TIPC^Controller^Controller Instance">
 			<OwnerB Name="TIRC^TcCOM Objects^SimIoMaster^SimIoGroup">
 				<Link VarA="PlcTask Inputs^MAIN.dx" VarB="Inputs^dx"/>

@@ -3,19 +3,19 @@
   <PropertyGroup>
     <FileVersion>1.0.0.0</FileVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{dfe5d6a4-d04b-49db-a3a6-a71d4f10f519}</ProjectGuid>
+    <ProjectGuid>{4bacf94d-c151-4a8e-8063-65caa54b2319}</ProjectGuid>
     <SubObjectsSortedByName>true</SubObjectsSortedByName>
     <DownloadApplicationInfo>true</DownloadApplicationInfo>
     <WriteProductVersion>false</WriteProductVersion>
     <GenerateTpy>false</GenerateTpy>
     <Name>Controller</Name>
-    <ProgramVersion>3.1.4026.10</ProgramVersion>
-    <Application>{8c1003f6-d898-4276-9d94-21211f501618}</Application>
-    <TypeSystem>{3a4234fe-4dbb-456d-8384-51786a2e9aa9}</TypeSystem>
-    <Implicit_Task_Info>{a9eeb034-d1d7-4652-8d44-90d799820baf}</Implicit_Task_Info>
-    <Implicit_KindOfTask>{f03ba60c-cd0d-41aa-b30f-d3af2613574b}</Implicit_KindOfTask>
-    <Implicit_Jitter_Distribution>{21635516-4be7-426c-b954-9d19d1527c9a}</Implicit_Jitter_Distribution>
-    <LibraryReferences>{0119ddf8-a4f1-4489-8917-a48abc547eb8}</LibraryReferences>
+    <ProgramVersion>3.1.4026.12</ProgramVersion>
+    <Application>{898d9b5a-ef93-40f1-9253-524f9dc5215e}</Application>
+    <TypeSystem>{ff6ecd61-58ac-4dd0-b92f-5af00581ea22}</TypeSystem>
+    <Implicit_Task_Info>{e70014b5-70e3-4e5d-a5ff-cd6e3348a25a}</Implicit_Task_Info>
+    <Implicit_KindOfTask>{c91fa907-3fd6-414a-8760-279cf8c41d8c}</Implicit_KindOfTask>
+    <Implicit_Jitter_Distribution>{8efdb30d-0df3-4a4c-b797-427dcb5a05c9}</Implicit_Jitter_Distribution>
+    <LibraryReferences>{51b86901-79f1-4e8f-bae9-b0a2984a8702}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="PlcTask.TcTTO">
