@@ -1,4 +1,8 @@
-<img src="resources/beckhoff_nat.png" width="400"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="resources/beckhoff_nat_dark.png" width="400">
+  <source media="(prefers-color-scheme: light)" srcset="resources/beckhoff_nat_light.png" width="400">
+  <img alt="Beckhoff New Automation.">
+</picture>
 
 # Beckhoff TwinCAT TE1421 Simulation Runtime for FMI
 
@@ -15,7 +19,7 @@ All provided FMUs support FMI 2/3 and implement both interface types (Co-Simulat
 
 ### Validation Tools
 
-- fmpy
+- [fmpy](https://github.com/CATIA-Systems/FMPy)
 
 ### Importing Tools
 
@@ -47,7 +51,11 @@ Using the example of a _single-acting_ pneumatic cylinder and the associated pos
 The pneumatic cylinder to be modeled is a so-called _single-acting_ cylinder, i.e. the cylinder is pressurized with air from one side only and returned to its home position by spring force. To simplify matters, the system is modeled without a valve. 
 The physical model of the pneumatic cylinder is shown in the following figure.
 
-<img src="resources/PneumaticCylinderSketch.svg" width="300"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="resources/PneumaticCylinderSketch_dark.svg" width="300">
+  <source media="(prefers-color-scheme: light)" srcset="resources/PneumaticCylinderSketch_light.svg" width="300">
+  <img alt="Physical abstraction of a pneumatic cylinder.">
+</picture>
 
 In this image, $m$ is the piston mass, $c$ the spring stiffness and $A$ the piston area. 
 The piston position is denoted by $x$ and the air pressure in the cylinder is $p$. 
