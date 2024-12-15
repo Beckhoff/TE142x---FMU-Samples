@@ -1,6 +1,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="resources/beckhoff_nat_dark.png" width="400">
   <source media="(prefers-color-scheme: light)" srcset="resources/beckhoff_nat_light.png" width="400">
+  <img alt="Beckhoff New Automation.">
 </picture>
 
 # Beckhoff TwinCAT TE1421 Simulation Runtime for FMI
@@ -53,6 +54,7 @@ The physical model of the pneumatic cylinder is shown in the following figure.
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="resources/PneumaticCylinderSketch_dark.svg" width="300">
   <source media="(prefers-color-scheme: light)" srcset="resources/PneumaticCylinderSketch_light.svg" width="300">
+  <img alt="Physical abstraction of a pneumatic cylinder.">
 </picture>
 
 In this image, $m$ is the piston mass, $c$ the spring stiffness and $A$ the piston area. 
