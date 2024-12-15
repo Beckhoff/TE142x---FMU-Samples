@@ -15,7 +15,7 @@ All provided FMUs support FMI 2/3 and implement both interface types (Co-Simulat
 
 ### Validation Tools
 
-- fmpy
+- [fmpy](https://github.com/CATIA-Systems/FMPy)
 
 ### Importing Tools
 
@@ -47,7 +47,11 @@ Using the example of a _single-acting_ pneumatic cylinder and the associated pos
 The pneumatic cylinder to be modeled is a so-called _single-acting_ cylinder, i.e. the cylinder is pressurized with air from one side only and returned to its home position by spring force. To simplify matters, the system is modeled without a valve. 
 The physical model of the pneumatic cylinder is shown in the following figure.
 
-<img src="resources/PneumaticCylinderSketch.svg" width="300"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="resources/PneumaticCylinderSketch_dark.svg" width="300">
+  <source media="(prefers-color-scheme: light)" srcset="resources/PneumaticCylinderSketch_light.svg" width="300">
+  <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png">
+</picture>
 
 In this image, $m$ is the piston mass, $c$ the spring stiffness and $A$ the piston area. 
 The piston position is denoted by $x$ and the air pressure in the cylinder is $p$. 
