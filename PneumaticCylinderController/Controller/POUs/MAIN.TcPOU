@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
-  <POU Name="MAIN" Id="{9b3e4771-f52a-4b1c-8370-981099330540}">
+  <POU Name="MAIN" Id="{7f2bb7e0-0f6f-47d8-9e49-622f57a7fc98}">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
 	// Controller inputs (system states)
