@@ -268,6 +268,6 @@ The resulting control loop is stable and steady-state accurate.
 
 # License
 
-Copyright &copy; Beckhoff 2024.
+Copyright &copy; Beckhoff 2025.
 All rights reserved.
 The models and accompanying materials may only be used for testing and validation of FMI implementations.
