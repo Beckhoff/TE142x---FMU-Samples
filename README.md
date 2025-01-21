@@ -266,6 +266,16 @@ f &= - \lambda^3
 
 The resulting control loop is stable and steady-state accurate.
 
+## Control Loop
+
+The control loops schema is provided in the following figure. The controller output $q$ (air volume flow) is connected to the model's input. The model's output $\underline{x}$ (piston position $x$, piston velocity $\dot{x}$ and air pressure $p$) are connected to the controller's input. The controller's setpoint $w$ is provided by the user from within TwinCAT.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="resources/ControlLoopDiagram_dark.svg" width="300">
+  <source media="(prefers-color-scheme: light)" srcset="resources/ControlLoopDiagram_light.svg" width="300">
+  <img alt="Control loop block diagram.">
+</picture>
+
 # License
 
 Copyright &copy; Beckhoff 2025.
