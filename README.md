@@ -7,7 +7,7 @@
 # Beckhoff TwinCAT TE1421 Simulation Runtime for FMI
 
 This repository provides sample FMUs exported from the [Beckhoff TwinCAT TE1421 Simulation Runtime for FMI](https://www.beckhoff.com/en-us/products/automation/twincat/texxxx-twincat-3-engineering/te1421.html).
-These FMUs (PneumaticCylinderController2.fmu for FMI 2 and PneumaticCylinderController3.fmu for FMI 3) contain a preconfigured TwinCAT UserMode Runtime for controlling a pneumatic cylinder model (PneumaticCylinderModel2.fmu for FMI 2 and PneumaticCylinderModel3.fmu for FMI 3) in a SiL-Simulation.
+These FMUs (PneumaticCylinderController2.fmu for FMI 2 and PneumaticCylinderController3.fmu for FMI 3) contain a preconfigured TwinCAT Usermode Runtime for controlling a pneumatic cylinder model (PneumaticCylinderModel2.fmu for FMI 2 and PneumaticCylinderModel3.fmu for FMI 3) in a SiL-Simulation.
 In addition to the FMUs, this repository also provides the TwinCAT project with the control algorithm.
 
 The [pneumatic cylinder model](#model) and the [control algorithm](#control) is documented below.
@@ -268,7 +268,7 @@ The resulting control loop is stable and steady-state accurate.
 
 ## Control Loop
 
-The control loop schema is provided in the following figure. The controller output $q$ (air volume flow) is connected to the model's input. The model's output $\underline{x}$ (piston position $x$, piston velocity $\dot{x}$ and air pressure $p$) ist connected to the controller's input. The controller's setpoint $w$ is provided by the user from within TwinCAT.
+The control loop schema is provided in the following figure. The controller output $q$ (air volume flow) is connected to the model's input. The model's output $\underline{x}$ (piston position $x$, piston velocity $\dot{x}$ and air pressure $p$) is connected to the controller's input. The controller's setpoint $w$ is provided by the user from within TwinCAT.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="resources/ControlLoopDiagram_dark.svg" width="300">
