@@ -15,7 +15,7 @@ Further documentation on the required TwinCAT installation and on how to use the
 
 ## FMU Export Compatibility information
 
-The TwinCAT Runtime and the pneumatic cylinder model are provided as FMI2 and FMI3 FMUs. They implement both interface types (Co-Simulation and Model-Exchange). The The TwinCAT Runtime FMUs are distributed as binary FMUs for 64-Bit Windows only, the pneumatic cylinder FMU provides binaries for 64-Bit Window and also the source code.
+The TwinCAT Runtime and the pneumatic cylinder model are provided as FMI2 and FMI3 FMUs. They implement both interface types (Co-Simulation and Model-Exchange). The The TwinCAT Runtime FMUs are distributed as binary FMUs for 64-Bit Windows only, the pneumatic cylinder FMU provides binaries for 64-Bit Windows and also the source code.
 
 ### Validation Tools
 
