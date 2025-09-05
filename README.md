@@ -25,7 +25,6 @@ The TwinCAT Runtime and the pneumatic cylinder model are provided as FMI2 and FM
 
 - Dymola
 - MapleSim
-- OpenModelica
 - Simulink&reg;
 
 # Beckhoff TwinCAT TE1420 Target for FMI

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.12">
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.18">
 	<DataTypes>
 		<DataType>
 			<Name GUID="{6D4FD3BA-AB2F-4710-8EA7-4053669988E2}">ITcSimIoCfgProvider</Name>
@@ -63,7 +63,7 @@
 	<ImageDatas>
 		<ImageData Id="1000">424d360300000000000036000000280000001000000010000000010018000000000000000000c40e0000c40e00000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000ff00ff000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000000000000000000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000000000ff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0000000ff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0c0c0c0000000ff00ffff00ffff00ff000000ff00ffff00ffff00ff030003c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0c0c0c0000000ff00ffff00ffff00ff000000ff00ffff00ffff00ff000000000000000000000000000000000000c0c0c0c0c0c0000000ff00ffff00ffff00ff000000ff00ffff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0000000ff00ffff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000000000ff00ffff00ff000000000000000000ff00ffff00ffff00ffff00ffff00ff000000000000000000000000000000000000ff00ffff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff</ImageData>
 	</ImageDatas>
-	<Project ProjectGUID="{513AEA55-413B-400A-8843-868DA2FCF0D0}" Target64Bit="true" ShowHideConfigurations="#x6">
+	<Project ProjectGUID="{DC2AF0B5-6BB9-4F47-836A-8FA36471C102}" TargetNetId="199.47.129.72.1.1" Target64Bit="true" ShowHideConfigurations="#x6">
 		<System>
 			<Tasks>
 				<Task Id="2" Priority="1" CycleTime="10000" AmsPort="350" AdtTasks="true">
@@ -74,12 +74,12 @@
 				</Task>
 			</Tasks>
 			<Modules>
-				<Module Id="#x01010010" KeepUnrestoredLinks="2" ClassFactoryId="Beckhoff Automation GmbH|SimulationIO|1.2.3.0">
+				<Module Id="#x01010010" KeepUnrestoredLinks="2" ClassFactoryId="Beckhoff Automation GmbH|SimulationIO|1.2.11.0">
 					<Name>SimIoMaster</Name>
 					<ImageId>1000</ImageId>
 					<Xml>
-						<TcSimRuntimeFmi_Configuration autoStartRuntime="false" fmiVersion="0" fmuExportDir="C:/ProgramData/Beckhoff/TwinCAT/Functions/TE1421-Simulation-Runtime-for-FMI" fmuFileName="PneumaticCylinderController2" includeBootProject="false" simulationPacing="true" waitForActivation="false" waitForActivationTime="0">
-							<ioHirarchie>
+						<TcSimRuntimeFmi_Configuration additionalResources="false" additionalResourcesDir="C:/ProgramData/Beckhoff/TwinCAT/Functions/TE1421-Simulation-Runtime-for-FMI/AdditionalResources" autoStartRuntime="false" fmiVersion="0" fmuExportDir="C:/ProgramData/Beckhoff/TwinCAT/Functions/TE1421-Simulation-Runtime-for-FMI" fmuFileName="PneumaticCylinderController2" includeBootProject="false" simulationPacing="true" variableNamingConvention="0" waitForActivation="false" waitForActivationTime="0">
+							<ioHierarchy>
 								<childitems>
 									<item>
 										<checkState>1</checkState>
@@ -148,11 +148,11 @@
 									<isExpanded>false</isExpanded>
 									<tname>TIRC^TcCOM Objects^SimIoMaster</tname>
 								</item>
-							</ioHirarchie>
+							</ioHierarchy>
 						</TcSimRuntimeFmi_Configuration>
-						<TcSimRuntimeFmi_Hash>0x8f21031cb21ef6dd</TcSimRuntimeFmi_Hash>
+						<TcSimRuntimeFmi_Hash>0x6525d59e96985b21</TcSimRuntimeFmi_Hash>
 					</Xml>
-					<TmcDesc GUID="{020BA85F-9E45-41BC-86A4-7470B07659B3}" ClassFactoryId="Beckhoff Automation GmbH|SimulationIO|1.2.3.0">
+					<TmcDesc GUID="{020BA85F-9E45-41BC-86A4-7470B07659B3}" ClassFactoryId="Beckhoff Automation GmbH|SimulationIO|1.2.11.0">
 						<Name>SimIoMaster</Name>
 						<CLSID ClassFactory="SimulationIO">{020BA85F-9E45-41BC-86A4-7470B07659B3}</CLSID>
 						<Info>
@@ -200,16 +200,49 @@
 								<PTCID>#x03002103</PTCID>
 								<ContextId>1</ContextId>
 							</Parameter>
+							<Parameter HideParameter="true" ReadOnly="true">
+								<Name>DataAreaCfg0</Name>
+								<BitSize>0</BitSize>
+								<BaseType GUID="{BD3BA8A6-FB59-4197-B6BA-A3B09FFC369C}" Namespace="IO">TcIoDataAreaCfg</BaseType>
+								<ArrayInfo>
+									<LBound>0</LBound>
+									<Elements Min="0" MaxUnbounded="true">0</Elements>
+								</ArrayInfo>
+								<PTCID>#x03007000</PTCID>
+								<ContextId>1</ContextId>
+							</Parameter>
+							<Parameter HideParameter="true" ReadOnly="true">
+								<Name>DataAreaCfg1</Name>
+								<BitSize>0</BitSize>
+								<BaseType GUID="{BD3BA8A6-FB59-4197-B6BA-A3B09FFC369C}" Namespace="IO">TcIoDataAreaCfg</BaseType>
+								<ArrayInfo>
+									<LBound>0</LBound>
+									<Elements Min="0" MaxUnbounded="true">0</Elements>
+								</ArrayInfo>
+								<PTCID>#x03007001</PTCID>
+								<ContextId>1</ContextId>
+							</Parameter>
+							<Parameter HideParameter="true" ReadOnly="true">
+								<Name>DataAreaSizes</Name>
+								<BitSize>128</BitSize>
+								<BaseType GUID="{C636B456-B483-42A5-BD8A-58753433F375}" Namespace="IO">TcIoDataAreaSize</BaseType>
+								<ArrayInfo>
+									<LBound>0</LBound>
+									<Elements Min="0" Max="64">2</Elements>
+								</ArrayInfo>
+								<PTCID>#x0300002a</PTCID>
+								<ContextId>1</ContextId>
+							</Parameter>
 						</Parameters>
 						<DataAreas>
-							<DataArea>
-								<AreaNo AreaType="InputSrc">0</AreaNo>
+							<DataArea DisableCodeGeneration="true">
+								<AreaNo AreaType="InputSrc" CreateSymbols="true" DynamicArea="true">0</AreaNo>
 								<Name>Inputs</Name>
 								<ContextId>1</ContextId>
 								<ByteSize>0</ByteSize>
 							</DataArea>
-							<DataArea>
-								<AreaNo AreaType="OutputDst">1</AreaNo>
+							<DataArea DisableCodeGeneration="true">
+								<AreaNo AreaType="OutputDst" CreateSymbols="true" DynamicArea="true">1</AreaNo>
 								<Name>Outputs</Name>
 								<ContextId>1</ContextId>
 								<ByteSize>0</ByteSize>
@@ -233,6 +266,22 @@
 								<Name>TraceLevelMax</Name>
 								<EnumText>tlAlways</EnumText>
 							</Value>
+							<Value>
+								<Name>DataAreaSizes[0].area</Name>
+								<Value>0</Value>
+							</Value>
+							<Value>
+								<Name>DataAreaSizes[0].size</Name>
+								<Value>0</Value>
+							</Value>
+							<Value>
+								<Name>DataAreaSizes[1].area</Name>
+								<Value>1</Value>
+							</Value>
+							<Value>
+								<Name>DataAreaSizes[1].size</Name>
+								<Value>0</Value>
+							</Value>
 						</ParameterValues>
 						<InterfacePointerValues>
 							<Value>
@@ -241,10 +290,10 @@
 							</Value>
 						</InterfacePointerValues>
 					</TmcDesc>
-					<Module Id="#x01010020" KeepUnrestoredLinks="2" ClassFactoryId="Beckhoff Automation GmbH|SimulationIO|1.2.3.0">
+					<Module Id="#x01010020" KeepUnrestoredLinks="2" ClassFactoryId="Beckhoff Automation GmbH|SimulationIO|1.2.11.0">
 						<Name>SimIoGroup</Name>
 						<ImageId>1000</ImageId>
-						<TmcDesc GUID="{2DC91CFE-572A-4479-BB91-A9B3CD41ABE6}" ClassFactoryId="Beckhoff Automation GmbH|SimulationIO|1.2.3.0">
+						<TmcDesc GUID="{2DC91CFE-572A-4479-BB91-A9B3CD41ABE6}" ClassFactoryId="Beckhoff Automation GmbH|SimulationIO|1.2.11.0">
 							<Name>SimIoGroup</Name>
 							<CLSID ClassFactory="SimulationIO">{2DC91CFE-572A-4479-BB91-A9B3CD41ABE6}</CLSID>
 							<Info>
@@ -299,7 +348,7 @@
 									<PTCID>#x03007001</PTCID>
 									<ContextId>1</ContextId>
 								</Parameter>
-								<Parameter ReadOnly="true">
+								<Parameter HideParameter="true" ReadOnly="true">
 									<Name>DataAreaSizes</Name>
 									<BitSize>128</BitSize>
 									<BaseType GUID="{C636B456-B483-42A5-BD8A-58753433F375}" Namespace="IO">TcIoDataAreaSize</BaseType>
@@ -377,6 +426,10 @@
 									<Value>0</Value>
 								</Value>
 								<Value>
+									<Name>DataAreaCfg0[0].mappingState</Name>
+									<EnumText>MS_Mapped</EnumText>
+								</Value>
+								<Value>
 									<Name>DataAreaCfg0[1].pid</Name>
 									<Value>0</Value>
 								</Value>
@@ -387,6 +440,10 @@
 								<Value>
 									<Name>DataAreaCfg0[1].bitOffs</Name>
 									<Value>64</Value>
+								</Value>
+								<Value>
+									<Name>DataAreaCfg0[1].mappingState</Name>
+									<EnumText>MS_Mapped</EnumText>
 								</Value>
 								<Value>
 									<Name>DataAreaCfg0[2].pid</Name>
@@ -401,6 +458,10 @@
 									<Value>128</Value>
 								</Value>
 								<Value>
+									<Name>DataAreaCfg0[2].mappingState</Name>
+									<EnumText>MS_Mapped</EnumText>
+								</Value>
+								<Value>
 									<Name>DataAreaCfg1[0].pid</Name>
 									<Value>0</Value>
 								</Value>
@@ -411,6 +472,10 @@
 								<Value>
 									<Name>DataAreaCfg1[0].bitOffs</Name>
 									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>DataAreaCfg1[0].mappingState</Name>
+									<EnumText>MS_Mapped</EnumText>
 								</Value>
 								<Value>
 									<Name>DataAreaSizes[0].area</Name>
@@ -441,8 +506,8 @@
 			</Modules>
 		</System>
 		<Plc>
-			<Project GUID="{925D19F7-D22B-450C-90F5-99F22910EB4F}" Name="Controller" PrjFilePath="Controller\Controller.plcproj" TmcFilePath="Controller\Controller.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{6BB890C5-CFB4-DB21-6C9B-33EE65E265F3}">
+			<Project GUID="{9D7C630B-C8F4-40B6-ACCB-CEDEC94909A6}" Name="Controller" PrjFilePath="Controller\Controller.plcproj" TmcFilePath="Controller\Controller.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{FF17DEAF-7BAC-5B04-B62F-E811C5801FC5}" TmcPath="Controller\Controller.tmc">
 					<Name>Controller Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="2" AreaNo="1">
@@ -488,8 +553,10 @@
 				</Instance>
 			</Project>
 		</Plc>
+		<Io/>
 	</Project>
 	<Mappings>
+		<MappingInfo Identifier="{00000000-2001-0850-0020-500820000101}" Id="#x02030010"/>
 		<OwnerA Name="TIPC^Controller^Controller Instance">
 			<OwnerB Name="TIRC^TcCOM Objects^SimIoMaster^SimIoGroup">
 				<Link VarA="PlcTask Inputs^MAIN.dx" VarB="Inputs^dx"/>
