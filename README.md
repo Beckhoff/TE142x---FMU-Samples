@@ -26,6 +26,10 @@ The TwinCAT Runtime and the pneumatic cylinder model are provided as FMI2 and FM
 - Dymola
 - MapleSim
 - Simulink&reg;
+- ISG-virtuous
+- fe.screen-sim
+- Siemens Simit
+- [Hopsan](https://github.com/Hopsan/hopsan)
 
 # Beckhoff TwinCAT TE1420 Target for FMI
 
@@ -277,6 +281,6 @@ The control loop schema is provided in the following figure. The controller outp
 
 # License
 
-Copyright &copy; Beckhoff 2025.
+Copyright &copy; Beckhoff 2026.
 All rights reserved.
 The models and accompanying materials may only be used for testing and validation of FMI implementations.
