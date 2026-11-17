@@ -67,52 +67,52 @@ The air volume flow $q$ is the input variable.
 The momentum conservation theorem yields the following formula for the piston movement
 
 ```math
-\begin{align*}
+\begin{aligned}
 m \cdot \ddot{x} &= F_p - F_c \\\
 m \cdot \ddot{x} &= p \cdot A - c \cdot x.
-\end{align*}
+\end{aligned}
 ```
 
 Here, $F_p$ is the force on the piston resulting from the pressure $p$ and $F_c$ is the spring's force of restitution. Furthermore, the ideal gas law is denoted by the formula bellow.
 
 ```math
-\begin{align*}
+\begin{aligned}
 p \cdot V = n \cdot R \cdot T
-\end{align*}
+\end{aligned}
 ```
 
 Assuming an isothermal change of state, this formula can be rewritten as follows.
 
 ```math
-\begin{align*}
+\begin{aligned}
 \frac{p \cdot V}{n} = R \cdot T = \mathrm{const.}
-\end{align*}
+\end{aligned}
 ```
 
 This equation can be used to derive a differential equation for the air pressure in the pneumatic cylinder. Derivation of the ideal gas equation (for the case of isothermal change of state) with respect to time yields
 
 ```math
-\begin{align*}
+\begin{aligned}
 \frac{\dot{p} \cdot V}{n} + \frac{p \cdot \dot{V}}{n} - \frac{p \cdot V \cdot \dot{n}}{n^2} = 0.
-\end{align*}
+\end{aligned}
 ```
 
 With $q = \frac{V \cdot \dot{n}}{n}$ and $V = A \cdot x$ the air pressure dynamic then becomes
 
 ```math
-\begin{align*}
+\begin{aligned}
 \dot{p} &= \frac{p}{x} \cdot \left( \frac{q}{A} - \dot{x} \right).
-\end{align*}
+\end{aligned}
 ```
 
 The differential equation system describing the overall system is therefore denoted by the following formula.
 
 ```math
 \boxed{
-\begin{align*}
+\begin{aligned}
 m \cdot \ddot{x} &= p \cdot A - c \cdot x \\\
 \dot{p} &= \frac{p}{x} \cdot \left( \frac{q}{A} - \dot{x} \right)
-\end{align*}
+\end{aligned}
 }
 ```
 
@@ -120,7 +120,7 @@ The piston position $x$, the piston speed $\dot{x}$ and the cylinder air pressur
 
 ```math
 \boxed{
-\begin{align*}
+\begin{aligned}
 \dot{\underline{x}} &= 
 \begin{bmatrix} 
 x_2 \\\
@@ -135,7 +135,7 @@ x_2 \\\
 \end{bmatrix}
 \cdot u \\\
 \underline{y} &= \begin{bmatrix} 1 & 0 & 0 \end{bmatrix} \cdot \underline{x}
-\end{align*}
+\end{aligned}
 }
 ```
 
@@ -163,33 +163,33 @@ Position control is a common requirement for a linear actuator. A PI controller 
 First, the differential order $\delta$ is determined to perform an _exact state linearization_. The output equation $y$ is differentiated with respect to time until the input $u$ has an effect on a derivative of $y$.
 
 ```math
-\begin{align*}
+\begin{aligned}
 y &= x_1 \\\
 \dot{y} &= \dot{x}_1 = x_2 \\\
 \ddot{y} &= \dot{x}_2 = -\frac{c}{m} \cdot x_1 + \frac{A}{m} \cdot x_3 \\\
 y^{(3)} &= -\frac{c}{m} \cdot \dot{x}_1 + \frac{A}{m} \cdot \dot{x}_3 \\\
 &= -\frac{c}{m} \cdot x_2 - \frac{A}{m} \cdot \frac{x_2 \cdot x_3}{x_1} + \frac{1}{m} \cdot \frac{x_3}{x_1} \cdot u
-\end{align*}
+\end{aligned}
 ```
 
 Here, $u$ has an effect on $y^{(3)}$, i.e. the difference order is $\delta=3$. Since the number of states is equal to the difference order, the _exact state linearization_ can be carried out by transforming the system to so-called _nonlinear control canonical form_. For this purpose, the new states $`\underline{z} = \begin{bmatrix} y & \dot{y} & \ddot{y} \end{bmatrix}^\mathrm{T} = \begin{bmatrix} z_1 & z_2 & z_3 \end{bmatrix}^\mathrm{T} `$ are selected. With the new state vector
 
 ```math
-\begin{align*}
+\begin{aligned}
 \underline{z} &=
 \begin{bmatrix} 
 x_1 \\\
 x_2 \\\
 -\frac{c}{m} \cdot x_1 + \frac{A}{m} \cdot x_3
 \end{bmatrix}.
-\end{align*}
+\end{aligned}
 ```
 
 The system is then denoted by the equation system bellow.
 
 ```math
 \boxed{
-\begin{align*}
+\begin{aligned}
 \underline{\dot{z}} &=
 \begin{bmatrix} 
 z_2 \\\
@@ -203,7 +203,7 @@ z_3 \\\
 \frac{1}{m} \cdot \frac{x_3}{x_1}
 \end{bmatrix}
 \cdot u
-\end{align*}
+\end{aligned}
 }
 ```
 
@@ -211,9 +211,9 @@ The following control law is used for mathematical compensation of the non-linea
 
 ```math
 \boxed{
-\begin{align*}
+\begin{aligned}
 u = m \cdot \frac{x_1}{x_3} \cdot \left( \frac{c}{m} \cdot x_2 + \frac{A}{m} \cdot \frac{x_2 \cdot x_3}{x_1} + v \right)
-\end{align*}
+\end{aligned}
 }
 ```
 
@@ -221,49 +221,49 @@ The state linearized system has a new virtual input $v$, triple integrator behav
 
 ```math
 \boxed{
-\begin{align*}
+\begin{aligned}
 v = - \underline{r}^T \cdot \underline{z} + f \cdot w
-\end{align*}
+\end{aligned}
 }
 ```
 
 In the state controller equation, $\underline{r}$ is the controller matrix, $f$ the reference gain and $w$ the reference input. The closed control loop with this state controller has the following dynamics.
 
 ```math
-\begin{align*}
+\begin{aligned}
 z^{(3)}_1 &= - r_1 \cdot z_1 - r_2 \cdot z_2 - r_3 \cdot z_3 + f \cdot w \\\
 y^{(3)} &= - r_1 \cdot y - r_2 \cdot \dot{y} - r_3 \cdot \ddot{y} + f \cdot w \\\
 \mathcal{L} \left\{ y^{(3)} \right\} &= \mathcal{L} \left\{ - r_1 \cdot y - r_2 \cdot \dot{y} - r_3 \cdot \ddot{y} + f \cdot w \right\} \\\
 s^3 \cdot Y(s) &= - r_1 \cdot Y(s) - r_2 \cdot s \cdot Y(s) - r_3 \cdot s^2 \cdot Y(s) + f \cdot W(s)
-\end{align*}
+\end{aligned}
 ```
 
 The closed control loop dynamic is a low pass of order three and can be denoted by the transfer function below.
 
 ```math
-\begin{align*}
+\begin{aligned}
 G_w(s) = \frac{Y(s)}{W(s)} = \frac{f}{s^3 + r_3 \cdot s^2 + r_2 \cdot s + r_1}
-\end{align*}
+\end{aligned}
 ```
 
 For calculating the controller gains and the reference gain, the closed control loop dynamic is required to have a triple real eigenvalue in $\lambda \in \mathbb{R}^-$ and an overall gain of $|G_w(s)| = 1$.
 
 ```math
-\begin{align*}
+\begin{aligned}
 G_w(s) = \frac{f}{s^3 + r_3 \cdot s^2 + r_2 \cdot s + r_1} &\stackrel{!}{=} \frac{-\lambda^3}{(s-\lambda)^3}
-\end{align*}
+\end{aligned}
 ```
 
 Using this requirement then yields the controller parameters as follows.
 
 ```math
 \boxed{
-\begin{align*}
+\begin{aligned}
 r_1 &= - \lambda^3 \\\
 r_2 &= 3 \cdot \lambda^2 \\\
 r_3 &= - 3 \cdot \lambda \\\
 f &= - \lambda^3
-\end{align*}
+\end{aligned}
 }
 ```
 
